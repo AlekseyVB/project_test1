@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.h5
+*.keras
+*.pth
+*.pt
+*.pkl
+*.pickle
+outputs/
