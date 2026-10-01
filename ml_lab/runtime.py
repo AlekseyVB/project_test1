@@ -4,6 +4,7 @@ Demo fixtures are synthetic and must not be reported as real-world benchmarks.
 No helper downloads data or executes shell commands.
 """
 from dataclasses import dataclass
+from . import __version__
 import json
 import os
 from pathlib import Path
@@ -62,7 +63,7 @@ def settings(name):
             shell.run_line_magic('matplotlib', 'inline')
     except ImportError:
         pass
-    print(f'Версия 20 | source={cfg.source} | quick={cfg.quick} | GPU requested={cfg.use_gpu}')
+    print(f'Версия {__version__} | source={cfg.source} | quick={cfg.quick} | GPU requested={cfg.use_gpu}')
     if source == 'demo':
         print('Синтетические учебные данные: результаты не являются оценкой качества на реальном датасете.')
     return cfg
